@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="list">
+    <li>User1</li>
+    <li>User2</li>
+    <li>User3</li>
+    <li>User4</li>
+    <li>User5</li>
+</ul>
+
+<script>
+
+    let liElements = document.getElementsByTagName("li");
+    console.log(
+        liElements[0].innerHTML,
+        liElements[4].innerHTML,
+        liElements[1].innerHTML,
+        liElements[3].innerHTML,
+        liElements[2].innerHTML);
+
+
+    let querySelector = document.querySelectorAll("body > ul > li");
+    console.log(
+        querySelector[0].innerHTML,
+        querySelector[4].innerHTML,
+        querySelector[1].innerHTML,
+        querySelector[3].innerHTML,
+        querySelector[2].innerHTML);
+
+
+</script>
+</body>
+</html>

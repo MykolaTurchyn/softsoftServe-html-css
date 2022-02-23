@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="mainDiv">
+    <div class="wrapDiv">
+        <button class="button">Live Button!</button>
+        <p class="p1" style="display: none">Mouse on me!</p>
+        <p class="p2" style="display: none">I was pressed!</p>
+        <p class="p3" >Mouse is not on me!</p>
+    </div>
+</div>
+
+
+<script>
+    let mouseOver = () => {
+        document.getElementsByClassName("p1")[0].style.display = "block";
+    }
+    let mouseOut = () => {
+        document.getElementsByClassName("p1")[0].style.display = "none";
+    }
+    let pressBTN = () => {
+        document.getElementsByClassName("p2")[0].style.display = "block";
+    }
+
+    //
+    // let mouseOutBtn=() =>  {
+    //     document.getElementsByClassName("p2")[0].style.display = "none";
+    // }
+
+    let mouseOverBtn1 = () => {
+        document.getElementsByClassName("p3")[0].style.display = "none";
+    }
+    let mouseOutBtn1 = () => {
+        document.getElementsByClassName("p3")[0].style.display = "block";
+    }
+
+    let mainDiv = document.getElementsByClassName("mainDiv");
+    mainDiv[0].style.border = "1px solid black";
+    mainDiv[0].style.height = '200px';
+    mainDiv[0].style.width = '200px';
+
+    let button = document.getElementsByClassName('button')[0];
+    button.addEventListener("mouseout", mouseOut);
+    button.addEventListener("mouseover", mouseOver);
+    button.addEventListener("click", pressBTN);
+    // button.addEventListener("mouseout", mouseOutBtn);
+    button.addEventListener("mouseover", mouseOverBtn1);
+    button.addEventListener("mouseout", mouseOutBtn1);
+
+    let wrapDiv = document.getElementsByClassName("wrapDiv");
+    wrapDiv[0].style.margin = "10px";
+
+
+
+
+</script>
+</body>
+</html>

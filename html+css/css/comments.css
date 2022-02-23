@@ -1,0 +1,44 @@
+body {
+    background: orange;
+    text-align: center;
+
+}
+
+.comment-div {
+    /*margin-top: 5px;*/
+    border-radius: 7px;
+    background-color: antiquewhite;
+}
+
+
+#post:hover {
+    background-color: darkorange;
+}
+
+#comment > div > p {
+    background-color: beige;
+    border-radius: 9px;
+}
+
+#comment > div > span{
+
+}
+#comment > div {
+    background-color: #fadcb9;
+    border-radius: 20px;
+    height: fit-content;
+    max-width: 750px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-top: 14px;
+}
+.inputs#comment-input {
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+}
+.inputs {
+    width: 200px;
+}

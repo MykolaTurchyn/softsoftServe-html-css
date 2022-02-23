@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comments Book</title>
+    <link rel="stylesheet" href="././css/comments.css">
+</head>
+<body>
+
+<input type="text" class="inputs" id="comment-input" placeholder="Add your comment...">
+<input type="text" class="inputs" id="nickname-input" placeholder="Enter you NickName,please...">
+<button id="post-btn">Post</button>
+<div id="comment">
+
+</div>
+<script>
+    let postBtn = document.getElementById("post-btn");
+    let commentInput = document.getElementById("comment-input");
+    let nicknameInput = document.getElementById("nickname-input");
+    let commentWrap = document.getElementById('comment');
+    let data = new Date();
+
+    postBtn.addEventListener("click", () => {
+        if (commentInput.value === "" || nicknameInput.value === "" ) {
+            alert("Please fill in all fields");
+            return false;
+        } else {
+            const div = document.createElement("div");
+            const p = document.createElement("p");
+            const span = document.createElement("span");
+            const span1 = document.createElement("span");
+            span1.className = "nickname";
+
+            const pNode = document.createTextNode(`${commentInput.value}`);
+            const spanNode = document.createTextNode(`data: ${data.toLocaleDateString()}, time: ${data.toLocaleTimeString()}`);
+            const span1Node = document.createTextNode(`NickName: ${nicknameInput.value}`);
+
+
+            div.appendChild(p);
+            div.appendChild(span);
+            div.appendChild(span1);
+            p.appendChild(pNode);
+            span.appendChild(spanNode);
+            span1.appendChild(span1Node);
+
+            commentInput.value = "";
+            nicknameInput.value = "";
+
+            commentWrap.appendChild(div);
+
+        }
+    });
+
+</script>
+
+</body>
+</html>

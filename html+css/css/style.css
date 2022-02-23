@@ -8,9 +8,6 @@
     text-decoration: none;
 }
 
-/*.nav_menu_item a :hover {*/
-/*    text-decoration-color: #FF8126;*/
-/*}*/
 
 .top_bar {
     height: 95px;
@@ -51,7 +48,7 @@
 .header_content {
     margin-top: 20px;
     height: 500px;
-    background-image: url("/img/bg-fruits.svg");
+    background-image: url("/html+css/img/bg-fruits.svg");
     justify-content: center;
     z-index: 1;
     border-radius: 7px;
@@ -137,9 +134,11 @@
     background-color: var(--orange-color);
     border-radius: 50%;
 }
+
 .content_who_make_content {
     padding-left: 50px;
 }
+
 .content_who_make_text_check {
     display: flex;
     align-items: center;
@@ -201,18 +200,24 @@ p.content_shop_online_text {
     height: 45px;
     width: 200px;
 }
-.contacts_title{
+
+.contacts_title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .contact_btns {
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
 
 }
+
 .btn_img {
     margin: 8px;
+}
+
+.nav_menu_item:hover {
 
 }
