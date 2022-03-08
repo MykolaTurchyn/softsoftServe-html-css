@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Claculator</title>
+    <style>
+        .label{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+
+<form >
+    <label class="label">
+         Секунд:
+        <input type="number" value="seconds">
+        Хвилин:
+        <input type="number" value="minutes">
+        Годин:
+        <input type="number" value="hours">
+        Тижнів:
+        <input type="number" value="weeks">
+        Місяців:
+        <input type="number" value="months">
+        Років:
+        <input type="number" value="years">
+
+        <button > Submit</button>
+    </label>
+</form>
+
+
+
+<script>
+    const howMuchSec = (seconds = 0, minutes = 0, hours = 0, weeks = 0, months = 0, years = 0) => {
+        minutes = Math.floor((minutes * 60)); // get minutes
+        hours = Math.floor(hours * 3600); // get hours
+        weeks = Math.floor(24 * 3600) * weeks;
+        months = Math.floor(24 * 30 * 3600) * months;
+        years = Math.floor(24 * 90 * 3600) * years;
+        return years+months + weeks + hours + minutes + seconds;
+    }
+    console.log(howMuchSec(1,1,1,1,1,1));
+</script>
+</body>
+</html>
